@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="https://cdn-icons-png.flaticon.com/128/10798/10798161.png">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+<title> Time Converter</title>
+	<style>
+		td, th {
+			text-align: center;
+		}
+		.prl {
+			background-color: #0B2447;
+  			border: none;
+  			color: white;
+  			padding: 10px 20px;
+		}
+		body {
+			font-family: 'Lato';
+			color: white;
+			background-size: cover;
+		}
+		h1 {
+			text-align: center;
+			color: #19376D;
+			font-family: cursive;
+  		}
+	</style>
+</head>
+<body background="http://wallpapercave.com/wp/wp1836740.jpg">
+	<br><br><br><h1><b>Time Converter</b></h1>
+<div class="row middle">
+	<div class="col-xl-3 lael"><br><br></div>
+	<div class="col-xl-6 gr">
+		<center><br><br><div class="el"><p><br>
+		CONVERT<br>
+		Days ➣ Seconds, Minutes, Hours <br> 
+		<input type="text" id="value" placeholder="Value"><br>
+		<br>
+		<button type="button" class="btn btn-sm prl" onclick="min()">Minutes</button>
+		<button type="button" class="btn btn-sm prl" onclick="sec()">Seconds</button>
+		<button type="button" class="btn btn-sm prl" onclick="hrs()">Hours</button>
+		<div>Value: <p id="id1"></p></div>
+	<script>
+		function sec() {
+		var n1 = document.getElementById('value').value;
+		var n2 = 86400;
+		var n3 = " seconds";
+		var add = Number(n1) * Number(n2) + n3;
+		document.getElementById('id1').innerHTML = add;
+		}
+
+		function min() {
+		var n1 = document.getElementById('value').value;
+		var n2 = 1440;
+		var n4 = " minutes";
+		var sub = Number(n1) * Number(n2) + n4;
+		document.getElementById('id1').innerHTML = sub;
+		}
+
+		function hrs() {
+		var n1 = document.getElementById('value').value;
+		var n2 = 24;
+		var n5 = " hours";
+		var mul = Number(n1) * Number(n2) + n5;
+		document.getElementById('id1').innerHTML = mul;
+		}
+	</script>
+	</p></div></center>
+	</div>
+	<div class="col-xl-3 lol"><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+</body>
+</html>
